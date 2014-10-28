@@ -1,0 +1,5 @@
+default['resque_web']['user'] = 'redis'
+default['resque_web']['group'] = 'redis'
+default['resque_web']['home'] = '/var/lib/redis'
+default['resque_web']['address'] = '127.0.0.1'
+default['resque_web']['port'] = '80'

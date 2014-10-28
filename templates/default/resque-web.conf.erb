@@ -1,0 +1,14 @@
+description "resque-web"
+
+start on started networking
+
+respawn
+respawn limit 5 5
+
+setuid <%= node['resque_web']['user'] %>
+setgid <%= node['resque_web']['group'] %>
+
+env HOME=<%= node['resque_web']['home'] %>
+chdir <%= node['resque_web']['home'] %>
+
+exec resque-web -F -L -o <%= node['resque_web']['address'] %> -p <%= node['resque_web']['port'] %>
