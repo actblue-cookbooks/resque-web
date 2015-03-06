@@ -1,3 +1,4 @@
+name 'resque-web'
 maintainer 'ActBlue Technical Services'
 maintainer_email 'decklin@actbluetech.com'
 license 'MIT'
